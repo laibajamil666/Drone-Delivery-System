@@ -6,6 +6,21 @@ void showRoute(string route) {
     cout << "Drone is following route: " << route << endl;
 }
 
+// Function to check battery level
+void checkBattery(int battery) {
+    cout << "Current Battery Level: " << battery << "%" << endl;
+
+    if (battery > 60) {
+        cout << "Battery is sufficient for delivery ✅" << endl;
+    }
+    else if (battery > 30) {
+        cout << "Battery is medium. Be careful ⚠️" << endl;
+    }
+    else {
+        cout << "Battery is LOW! Return to base immediately 🔋❗" << endl;
+    }
+}
+
 // Function to show delivery status
 void deliveryStatus(bool delivered) {
     if (delivered)
